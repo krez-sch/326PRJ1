@@ -9,5 +9,23 @@ import java.io.*;
 
 public class QuoteServer
 {
-  // Your code is here
+  public static void main(String[] args) {
+    try {
+      ServerSocket sock = new ServerSocket(6017);
+      // listen for connections
+      while (true) {
+      Socket client = sock.accept();
+      PrintWriter pout = new
+      PrintWriter(client.getOutputStream(), true);
+      // write the Date to the socket
+      pout.println(new java.util.Date().toString()); // change to quote
+      // close the socket and resume
+      // listen for connections
+      client.close();
+      }
+    }
+    catch (IOException e) {
+    System.err.println(e);
+    }
+  }
 }
