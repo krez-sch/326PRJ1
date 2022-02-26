@@ -1,4 +1,4 @@
-package Q1;
+
 /**
  * Quote server listening to port 6017.
  *
@@ -17,8 +17,9 @@ public class QuoteServer
       Socket client = sock.accept();
       PrintWriter pout = new
       PrintWriter(client.getOutputStream(), true);
-      // write the Date to the socket
-      pout.println(new java.util.Date().toString()); // change to quote
+      // write the Quote to the socket
+      String quote = "Code is like humor. When you have to explain it, it's bad.";
+      pout.println(quote.toString()); // save quote to the server
       // close the socket and resume
       // listen for connections
       client.close();

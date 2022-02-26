@@ -1,4 +1,4 @@
-package Q1;
+
 
 /**
  * Modified DateClient so that it requests a quote
@@ -16,7 +16,7 @@ public class QuoteClient
 			Socket sock = new Socket("127.0.0.1",6017);
 			InputStream in = sock.getInputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			// read the date from the socket (need to change to get quote)
+			// read the quote from the socket 
 			String line;
 			while ((line = br.readLine()) != null){
 				System.out.println(line);
