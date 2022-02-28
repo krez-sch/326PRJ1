@@ -29,9 +29,10 @@ public class EchoClient
                 PrintWriter pout = new PrintWriter(sock.getOutputStream(), true);
                 
                 // Read the chat from the user and send it to the server
-                lineUser = console.readLine("\nEnter a line: ");
+                lineUser = console.readLine("\nClient: ");
                 pout.println(lineUser);
                 
+                System.out.println("Server:");
                 // read the chat from the server 
                 while ((lineServer = br.readLine()) != null){
                     System.out.println(lineServer);

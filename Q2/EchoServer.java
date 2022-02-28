@@ -21,7 +21,6 @@ public class EchoServer
             while (stayRunning) {
             	// listen for connections
                 Socket client = sock.accept();
-                System.out.println("New socket.");
                 
                 // Get input from the client
                 InputStream in = client.getInputStream();
